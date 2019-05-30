@@ -1,0 +1,4 @@
+{
+  "MinecraftServer": "MinecraftServer.js",
+  "SoundSystem": "SoundSystem.js"
+}

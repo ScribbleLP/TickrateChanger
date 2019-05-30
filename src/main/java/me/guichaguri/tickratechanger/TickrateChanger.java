@@ -1,31 +1,27 @@
 package me.guichaguri.tickratechanger;
 
 import java.io.File;
-import java.util.Map;
+
+import me.guichaguri.tickratechanger.command.TickrateCommand;
 import net.minecraft.client.Minecraft;
-import net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper;
-import net.minecraftforge.fml.relauncher.IFMLCallHook;
-import net.minecraftforge.fml.relauncher.IFMLLoadingPlugin;
-import net.minecraftforge.fml.relauncher.IFMLLoadingPlugin.TransformerExclusions;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
+import net.minecraftforge.fml.network.simple.SimpleChannel;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 /**
  * @author Guilherme Chaguri
  */
-@TransformerExclusions({"me.guichaguri.tickratechanger"})
-public class TickrateChanger implements IFMLLoadingPlugin, IFMLCallHook {
+public class TickrateChanger {
 
     public static TickrateChanger INSTANCE;
     public static Logger LOGGER = LogManager.getLogger("Tickrate Changer");
-    public static SimpleNetworkWrapper NETWORK;
+    public static SimpleChannel NETWORK;
+    public static final String NETWORK_VERSION = "1";
     public static TickrateCommand COMMAND = null;
     public static File CONFIG_FILE = null;
 
     public static final String MODID = "tickratechanger";
-    public static final String VERSION = "1.0.13";
+    public static final String VERSION = "2.0";
 
     public static final String GAME_RULE = "tickrate";
 
@@ -50,41 +46,13 @@ public class TickrateChanger implements IFMLLoadingPlugin, IFMLCallHook {
         INSTANCE = this;
     }
 
-    @Override
-    public String[] getASMTransformerClass() {
-        return new String[]{"me.guichaguri.tickratechanger.TickrateTransformer"};
-    }
-    @Override
-    public String getModContainerClass() {
-        return null;
-    }
-    @Override
-    public String getSetupClass() {
-        return "me.guichaguri.tickratechanger.TickrateChanger";
-    }
-    @Override
-    public void injectData(Map<String, Object> data) {
-
-    }
-    @Override
-    public String getAccessTransformerClass() {
-        return null;
-    }
-
-    @Override
-    public Void call() throws Exception {
-        return null;
-    }
-
-    @SideOnly(Side.CLIENT)
     public void updateClientTickrate(float tickrate, boolean log) {
         if(log) LOGGER.info("Updating client tickrate to " + tickrate);
 
         TICKS_PER_SECOND = tickrate;
         if(CHANGE_SOUND) GAME_SPEED = tickrate / 20F;
 
-        Minecraft mc = Minecraft.getMinecraft();
-        if(mc == null) return; // Wut
+        Minecraft mc = Minecraft.getInstance();
 
         mc.timer.tickLength = 1000F / tickrate;
     }
