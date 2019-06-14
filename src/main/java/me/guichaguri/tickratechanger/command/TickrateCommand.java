@@ -26,7 +26,7 @@ import static net.minecraft.util.text.TextFormatting.*;
 public class TickrateCommand {
     public TickrateCommand(CommandDispatcher<CommandSource> dispatcher) {
         LiteralCommandNode<CommandSource> cmd = dispatcher.register(
-                LiteralArgumentBuilder.<CommandSource>literal("tickratechanger")
+                LiteralArgumentBuilder.<CommandSource>literal("tickrate")
                         .requires((source) -> source.hasPermissionLevel(getRequiredPermissionLevel()))
                         .then(Commands.literal("help").executes(source -> {
                             showHelp(source.getSource());

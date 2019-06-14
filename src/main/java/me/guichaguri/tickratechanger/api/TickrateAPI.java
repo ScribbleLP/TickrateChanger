@@ -1,6 +1,7 @@
 package me.guichaguri.tickratechanger.api;
 
 import me.guichaguri.tickratechanger.TickrateChanger;
+import me.guichaguri.tickratechanger.TickrateConfig;
 import me.guichaguri.tickratechanger.TickrateMessageHandler.TickrateMessage;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;

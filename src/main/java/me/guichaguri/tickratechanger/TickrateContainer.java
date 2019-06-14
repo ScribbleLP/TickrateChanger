@@ -16,17 +16,22 @@ import net.minecraftforge.client.event.InputEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.LogicalSide;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent.PlayerLoggedInEvent;
 import net.minecraftforge.fml.common.thread.EffectiveSide;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLDedicatedServerSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
 import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fml.loading.FMLPaths;
 import net.minecraftforge.fml.network.NetworkRegistry;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.lwjgl.glfw.GLFW;
 
 /**
@@ -34,14 +39,17 @@ import org.lwjgl.glfw.GLFW;
  */
 @Mod(TickrateChanger.MODID)
 public class TickrateContainer {
-
+    public static final Logger logger = LogManager.getLogger("TickrateChanger");
     public static boolean KEYS_AVAILABLE = false;
 
     public static KeyBinding SWITCH_SPEED_KEYBIND = null;
     private long lastKeyInputTime = 0;
 
     public TickrateContainer() {
-        System.out.println("Initializing TickrateContainer!");
+        logger.info("Initializing TickrateContainer!");
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, TickrateConfig.ConfigSpec);
+        TickrateConfig.loadConfig(TickrateConfig.ConfigSpec, FMLPaths.CONFIGDIR.get().resolve("tickratechanger-common.toml"));
+        TickrateChanger.DEFAULT_TICKRATE=TickrateConfig.GENERAL.defaultTickrate.get().floatValue();
 
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         final IEventBus eventBus = MinecraftForge.EVENT_BUS;
