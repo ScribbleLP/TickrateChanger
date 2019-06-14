@@ -8,3 +8,7 @@ out/
 build/
 .gradle/
 .idea/
+changelog.txt
+CREDITS.txt
+LICENSE.txt
+README.txt
