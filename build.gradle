@@ -67,28 +67,12 @@ minecraft {
 jar {
     manifest {
         attributes([
-                "Specification-Title": "examplemod",
-                "Specification-Vendor": "examplemodsareus",
+                "Specification-Title": "tickratechanger",
                 "Specification-Version": "1", // We are version 1 of ourselves
                 "Implementation-Title": project.name,
                 "Implementation-Version": "${version}",
-                "Implementation-Vendor" :"examplemodsareus",
-                "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
-                'FMLCorePlugin': 'me.guichaguri.tickratechanger.TickrateChanger',
-                'FMLCorePluginContainsFMLMod': 'true',
-                'FMLAT': 'tickratechanger_at.cfg'
+                "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
-    }
-}
-
-// Create deobf dev jars
-task deobfJar(type: Jar) {
-    from sourceSets.main.output
-    classifier = 'deobf'
-    manifest {
-        attributes 'FMLCorePlugin': 'me.guichaguri.tickratechanger.TickrateChanger',
-                   'FMLCorePluginContainsFMLMod': 'true',
-                   'FMLAT': 'tickratechanger_at.cfg'
     }
 }
 

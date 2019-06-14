@@ -3,7 +3,7 @@ function initializeCoreMod() {
         'coremodone': {
             'target': {
                 'type': 'CLASS',
-                'name': 'net.minecraft.client.renderer.ChunkRenderContainer'
+                'name': 'paulscode.sound.SoundSystem'
             },
             'transformer': function(classNode) {
                 var Opcodes = Java.type('org.objectweb.asm.Opcodes')

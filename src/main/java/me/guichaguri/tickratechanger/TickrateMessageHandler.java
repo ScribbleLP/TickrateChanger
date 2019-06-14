@@ -20,7 +20,9 @@ public class TickrateMessageHandler {
         if (context.getDirection().getReceptionSide() == LogicalSide.SERVER) {
             EntityPlayerMP player = context.getSender();
 
-            if (!player.hasPermissionLevel(TickrateChanger.COMMAND.getRequiredPermissionLevel())) return;
+            if (player != null && TickrateChanger.COMMAND != null) {
+                if (!player.hasPermissionLevel(TickrateChanger.COMMAND.getRequiredPermissionLevel())) return;
+            }
         }
 
         float tickrate = msg.getTickrate();
