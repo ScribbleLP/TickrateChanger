@@ -2,17 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="12d9db28-f823-42d0-a0a3-b267315bbb6f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/guichaguri/tickratechanger/command/SetMapCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/guichaguri/tickratechanger/TickrateChanger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/guichaguri/tickratechanger/TickrateChanger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/guichaguri/tickratechanger/TickrateCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/guichaguri/tickratechanger/command/TickrateCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/guichaguri/tickratechanger/TickrateContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/guichaguri/tickratechanger/TickrateContainer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/guichaguri/tickratechanger/TickrateMessageHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/guichaguri/tickratechanger/TickrateMessageHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/guichaguri/tickratechanger/TickrateTransformer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/guichaguri/tickratechanger/api/TickrateAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/guichaguri/tickratechanger/api/TickrateAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/tickratechanger_at.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/tickratechanger_at.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/tickratechanger/lang/en_US.lang" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/tickratechanger/lang/en_us.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mcmod.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/mods.toml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/mods.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/tickratechanger_at.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/accesstransformer.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/MinecraftServer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/MinecraftServer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SoundSystem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/SoundSystem.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -77,62 +73,7 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/me/guichaguri/tickratechanger/TickrateContainer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="412">
-              <caret line="78" selection-start-line="78" selection-end-line="78" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/build/fg_cache/net/minecraftforge/forge/1.13.2-25.0.219_mapped_snapshot_20190528-1.13.2/forge-1.13.2-25.0.219_mapped_snapshot_20190528-1.13.2-sources.jar!/net/minecraft/util/text/TextComponentTranslation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="15" column="75" selection-start-line="15" selection-start-column="75" selection-end-line="15" selection-end-column="75" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/build/fg_cache/net/minecraftforge/forge/1.13.2-25.0.219_mapped_snapshot_20190528-1.13.2/forge-1.13.2-25.0.219_mapped_snapshot_20190528-1.13.2-sources.jar!/net/minecraft/util/text/translation/LanguageMap.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="39" column="61" lean-forward="true" selection-start-line="39" selection-start-column="61" selection-end-line="39" selection-end-column="61" />
-              <folding>
-                <element signature="e#2330#2331#0" expanded="true" />
-                <element signature="e#2358#2359#0" expanded="true" />
-                <element signature="e#2838#2839#0" expanded="true" />
-                <element signature="e#2883#2884#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/build/fg_cache/net/minecraftforge/forge/1.13.2-25.0.219_mapped_snapshot_20190528-1.13.2/forge-1.13.2-25.0.219_mapped_snapshot_20190528-1.13.2-sources.jar!/net/minecraftforge/fml/server/LanguageHook.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-529">
-              <caret line="50" column="23" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/assets/tickratechanger/lang/en_us.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="36" column="1" lean-forward="true" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -144,19 +85,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>default</find>
-      <find>commonha</find>
-      <find>getMine</find>
-      <find>getMinecraftServerInstance</find>
-      <find>server</find>
-      <find>getCur</find>
-      <find>getMinecraft()</find>
-      <find>Float.parse</find>
-      <find>keyboard</find>
-      <find>glfw</find>
-      <find>fmlcomm</find>
-      <find>none</find>
-      <find>key_non</find>
       <find>rules</find>
       <find>run(</find>
       <find>setPitch</find>
@@ -174,6 +102,19 @@
       <find>translate</find>
       <find>=</find>
       <find>&quot;\n</find>
+      <find>skipped lang</find>
+      <find>initialize</find>
+      <find>ChunkRenderConta</find>
+      <find>transforming</find>
+      <find>success</find>
+      <find>accessTransformers</find>
+      <find>DimensionManager.getWorld</find>
+      <find>commandsource</find>
+      <find>functionmana</find>
+      <find>loadData</find>
+      <find>loadda</find>
+      <find>func_212681_b</find>
+      <find>WorldServerMulti</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;: &quot;</replace>
@@ -191,21 +132,25 @@
         <option value="$PROJECT_DIR$/src/main/java/me/guichaguri/tickratechanger/command/SetDefaultCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/guichaguri/tickratechanger/command/SetRateCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/guichaguri/tickratechanger/api/TickrateAPI.java" />
-        <option value="$PROJECT_DIR$/src/main/java/me/guichaguri/tickratechanger/TickrateMessageHandler.java" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/coremods.json" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/MinecraftServer.js" />
         <option value="$PROJECT_DIR$/src/main/java/me/guichaguri/tickratechanger/TickrateTransformer.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/SoundSystem.js" />
         <option value="$PROJECT_DIR$/src/main/java/me/guichaguri/tickratechanger/TickrateChanger.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/META-INF/mods.toml" />
-        <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/tickratechanger_at.cfg" />
         <option value="$PROJECT_DIR$/src/main/resources/pack.mcmeta" />
-        <option value="$PROJECT_DIR$/src/main/java/me/guichaguri/tickratechanger/command/TickrateCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/guichaguri/tickratechanger/TickrateContainer.java" />
         <option value="$PROJECT_DIR$/src/main/resources/assets/tickratechanger/lang/en_us.json" />
+        <option value="$PROJECT_DIR$/src/main/java/me/guichaguri/tickratechanger/command/TickrateCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/SoundSystem.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/MinecraftServer.js" />
+        <option value="$PROJECT_DIR$/src/main/java/me/guichaguri/tickratechanger/TickrateMessageHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/META-INF/mods.toml" />
+        <option value="$PROJECT_DIR$/build.gradle" />
       </list>
     </option>
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="aVYRdYJH" />
   </component>
   <component name="ProjectConfigurationFiles">
     <option name="files">
@@ -220,16 +165,18 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="24" />
-    <option name="y" value="57" />
+    <option name="y" value="61" />
     <option name="width" value="1872" />
-    <option name="height" value="999" />
+    <option name="height" value="995" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="Course" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -248,46 +195,15 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
-            <path>
-              <item name="TickrateChanger" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TickrateChanger" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TickrateChanger" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TickrateChanger" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tickratechanger" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TickrateChanger" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TickrateChanger" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TickrateChanger" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TickrateChanger" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="lang" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Course" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -315,7 +231,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.runClient">
+  <component name="RunManager" selected="Gradle.TickrateChanger [build]">
     <configuration name="TickrateChanger [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -403,18 +319,23 @@
       <workItem from="1559184284030" duration="2068000" />
       <workItem from="1559246142167" duration="1070000" />
       <workItem from="1559247234019" duration="339000" />
-      <workItem from="1559247577991" duration="8295000" />
+      <workItem from="1559247577991" duration="9155000" />
+      <workItem from="1559268162738" duration="677000" />
+      <workItem from="1559274288640" duration="15000" />
+      <workItem from="1559274327881" duration="1928000" />
+      <workItem from="1559355850148" duration="171000" />
+      <workItem from="1560282572891" duration="1530000" />
+      <workItem from="1560434711237" duration="996000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21839000" />
+    <option name="totallyTimeSpent" value="28016000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="24" y="57" width="1872" height="999" extended-state="0" />
-    <editor active="true" />
+    <frame x="24" y="61" width="1872" height="995" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23135965" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24780701" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -423,13 +344,13 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32908458" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3719583" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.5040556" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39976826" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Build" order="7" weight="0.32908458" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32908458" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32716763" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Educational.CheckDetails" order="10" />
       <window_info anchor="bottom" id="Tool Output" order="11" />
@@ -453,6 +374,7 @@
       <window_info anchor="right" id="Database" order="9" show_stripe_button="false" />
       <window_info anchor="right" id="Palette&#9;" order="10" />
       <window_info anchor="right" id="Theme Preview" order="11" />
+      <window_info anchor="right" id="Cargo" order="12" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -478,65 +400,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/guichaguri/tickratechanger/api/TickrateAPI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="189" column="8" lean-forward="true" selection-start-line="189" selection-start-column="8" selection-end-line="197" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-tree/6.2/e9bf68e648c798bc1564e9dcb6f3611a50cd0af8/asm-tree-6.2-sources.jar!/org/objectweb/asm/tree/LdcInsnNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="46" column="16" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/coremods.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/21.0/b9ed26b8c23fe7cd3e6b463b34e54e5c6d9536d5/guava-21.0-sources.jar!/com/google/common/collect/AbstractMapBasedMultimap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="1293" column="16" selection-start-line="1293" selection-start-column="16" selection-end-line="1293" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.minecraftforge/coremods/0.5.0/20133889b2858e8fae4b98ca057233a68391d5f1/coremods-0.5.0-sources.jar!/net/minecraftforge/coremod/api/ASMAPI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.13.2-25.0.219_mapped_snapshot_20190528-1.13.2/forge-1.13.2-25.0.219_mapped_snapshot_20190528-1.13.2.jar!/net/minecraft/util/Util.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="62" column="23" selection-start-line="62" selection-start-column="23" selection-end-line="62" selection-end-column="23" />
-          <folding>
-            <element signature="e#2476#2477#0" expanded="true" />
-            <element signature="e#2520#2521#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.13.2-25.0.219_mapped_snapshot_20190528-1.13.2/forge-1.13.2-25.0.219_mapped_snapshot_20190528-1.13.2-sources.jar!/net/minecraft/server/MinecraftServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="596" column="41" lean-forward="true" selection-start-line="596" selection-start-column="41" selection-end-line="596" selection-end-column="41" />
-          <folding>
-            <element signature="e#24496#24497#0" expanded="true" />
-            <element signature="e#24550#24551#0" expanded="true" />
-            <element signature="e#49128#49129#0" expanded="true" />
-            <element signature="e#49163#49164#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-tree/6.2/e9bf68e648c798bc1564e9dcb6f3611a50cd0af8/asm-tree-6.2-sources.jar!/org/objectweb/asm/tree/MethodNode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="274">
@@ -552,13 +415,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/me/guichaguri/tickratechanger/TickrateTransformer.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/SoundSystem.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="713">
-          <caret line="31" column="24" lean-forward="true" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.13.2-25.0.219_mapped_snapshot_20190528-1.13.2/forge-1.13.2-25.0.219_mapped_snapshot_20190528-1.13.2-launcher.jar!/net/minecraftforge/fml/loading/moddiscovery/ModFileParser.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="690">
@@ -567,27 +423,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/mods.toml.kt" />
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.paulscode/soundsystem/201809301515/2895e424b98f8fe1a1e62169c3c7f65aabfab3e1/soundsystem-201809301515-sources.jar!/paulscode/sound/SoundSystem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22908">
-          <caret line="1004" column="24" selection-start-line="1004" selection-start-column="16" selection-end-line="1004" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/mods.toml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/MinecraftServer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="752">
-          <caret line="37" selection-start-line="37" selection-end-line="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.13.2-25.0.219_mapped_snapshot_20190528-1.13.2/forge-1.13.2-25.0.219_mapped_snapshot_20190528-1.13.2-sources.jar!/net/minecraft/util/Timer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -602,7 +437,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/tickratechanger_at.cfg">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/accesstransformer.cfg">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
           <caret line="3" selection-start-line="3" selection-end-line="3" />
@@ -623,16 +458,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mcmod.info">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mcmod.info" />
     <entry file="jar://$PROJECT_DIR$/build/fg_cache/net/minecraftforge/forge/1.13.2-25.0.219_mapped_snapshot_20190528-1.13.2/forge-1.13.2-25.0.219_mapped_snapshot_20190528-1.13.2-sources.jar!/net/minecraftforge/common/ForgeMod.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
@@ -651,20 +477,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="40" column="13" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/guichaguri/tickratechanger/TickrateChanger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="591">
-          <caret line="56" column="24" lean-forward="true" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/guichaguri/tickratechanger/TickrateMessageHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="777">
-          <caret line="45" column="73" selection-start-line="45" selection-start-column="73" selection-end-line="45" selection-end-column="73" />
         </state>
       </provider>
     </entry>
@@ -767,17 +579,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/guichaguri/tickratechanger/command/TickrateCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="126" column="45" lean-forward="true" selection-start-line="126" selection-start-column="45" selection-end-line="126" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1188#1203#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/build/fg_cache/net/minecraftforge/forge/1.13.2-25.0.219_mapped_snapshot_20190528-1.13.2/forge-1.13.2-25.0.219_mapped_snapshot_20190528-1.13.2-sources.jar!/net/minecraftforge/fml/network/NetworkHooks.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="167">
@@ -799,13 +600,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/guichaguri/tickratechanger/TickrateContainer.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/assets/tickratechanger/lang/pt_BR.lang">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/assets/tickratechanger/lang/en_us.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="78" selection-start-line="78" selection-end-line="78" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="345">
+          <caret line="36" column="1" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -816,13 +617,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/assets/tickratechanger/lang/pt_BR.lang">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="jar://$PROJECT_DIR$/build/fg_cache/net/minecraftforge/forge/1.13.2-25.0.219_mapped_snapshot_20190528-1.13.2/forge-1.13.2-25.0.219_mapped_snapshot_20190528-1.13.2-sources.jar!/net/minecraft/util/text/translation/LanguageMap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
-          <caret line="39" column="61" lean-forward="true" selection-start-line="39" selection-start-column="61" selection-end-line="39" selection-end-column="61" />
+          <caret line="39" column="61" selection-start-line="39" selection-start-column="61" selection-end-line="39" selection-end-column="61" />
           <folding>
             <element signature="e#2330#2331#0" expanded="true" />
             <element signature="e#2358#2359#0" expanded="true" />
@@ -839,10 +637,133 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/assets/tickratechanger/lang/en_us.json">
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.paulscode/soundsystem/201809301515/2895e424b98f8fe1a1e62169c3c7f65aabfab3e1/soundsystem-201809301515-sources.jar!/paulscode/sound/SoundSystem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="36" column="1" lean-forward="true" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
+        <state>
+          <caret column="23" selection-start-column="8" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/SoundSystem.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="52" selection-start-line="5" selection-start-column="52" selection-end-line="5" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/build/fg_cache/net/minecraftforge/forge/1.13.2-25.0.219_mapped_snapshot_20190528-1.13.2/forge-1.13.2-25.0.219_mapped_snapshot_20190528-1.13.2-sources.jar!/net/minecraft/server/MinecraftServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="28" selection-start-column="8" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/MinecraftServer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/me/guichaguri/tickratechanger/TickrateContainer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="78" selection-start-line="78" selection-end-line="78" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/me/guichaguri/tickratechanger/command/SetRateCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="38" column="32" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/me/guichaguri/tickratechanger/TickrateMessageHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="46" column="38" selection-start-line="46" selection-start-column="38" selection-end-line="46" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.minecraftforge.gradle/ForgeGradle/3.0.127/7e26a3c0bdf3705df899bdf4e16cc2daab2dd0be/ForgeGradle-3.0.127.jar!/net/minecraftforge/gradle/common/util/MinecraftExtension.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="104" column="30" lean-forward="true" selection-start-line="104" selection-start-column="30" selection-end-line="104" selection-end-column="30" />
+          <folding>
+            <element signature="e#3024#3025#0" expanded="true" />
+            <element signature="e#3086#3087#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/mods.toml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/me/guichaguri/tickratechanger/command/TickrateCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2001">
+          <caret line="107" column="41" selection-start-line="107" selection-start-column="41" selection-end-line="107" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/me/guichaguri/tickratechanger/TickrateChanger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="40" column="31" selection-start-line="40" selection-start-column="31" selection-end-line="40" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="7" column="45" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/util/Map.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="211" column="6" selection-start-line="211" selection-start-column="6" selection-end-line="211" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.13.2-25.0.219_mapped_snapshot_20190528-1.13.2/forge-1.13.2-25.0.219_mapped_snapshot_20190528-1.13.2-sources.jar!/net/minecraftforge/common/DimensionManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2346">
+          <caret line="163" column="45" selection-start-line="163" selection-start-column="45" selection-end-line="163" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.13.2-25.0.219_mapped_snapshot_20190528-1.13.2/forge-1.13.2-25.0.219_mapped_snapshot_20190528-1.13.2-sources.jar!/net/minecraft/server/MinecraftServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="331" column="48" selection-start-line="331" selection-start-column="48" selection-end-line="331" selection-end-column="48" />
+          <folding>
+            <element signature="e#24496#24497#0" expanded="true" />
+            <element signature="e#24550#24551#0" expanded="true" />
+            <element signature="e#49128#49129#0" expanded="true" />
+            <element signature="e#49163#49164#0" expanded="true" />
+            <element signature="e#58559#58560#0" expanded="true" />
+            <element signature="e#58590#58591#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.13.2-25.0.219_mapped_snapshot_20190528-1.13.2/forge-1.13.2-25.0.219_mapped_snapshot_20190528-1.13.2-sources.jar!/net/minecraft/advancements/FunctionManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="32" column="70" selection-start-line="32" selection-start-column="70" selection-end-line="32" selection-end-column="70" />
         </state>
       </provider>
     </entry>
