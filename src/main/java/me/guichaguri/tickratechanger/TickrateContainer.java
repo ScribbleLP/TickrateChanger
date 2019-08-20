@@ -1,20 +1,17 @@
 package me.guichaguri.tickratechanger;
 
-import me.guichaguri.tickratechanger.TickrateMessageHandler.TickrateMessage;
 import me.guichaguri.tickratechanger.api.TickrateAPI;
 import me.guichaguri.tickratechanger.command.TickrateCommand;
 import net.minecraft.client.settings.KeyBinding;
-import net.minecraft.client.util.InputMappings;
 import net.minecraft.server.MinecraftServer;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.world.GameRules;
 import net.minecraft.world.dimension.DimensionType;
 import net.minecraftforge.client.event.ClientChatReceivedEvent;
-import net.minecraftforge.client.event.InputEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.LogicalSide;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
@@ -29,10 +26,8 @@ import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
 import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.loading.FMLPaths;
-import net.minecraftforge.fml.network.NetworkRegistry;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.lwjgl.glfw.GLFW;
 
 /**
  * @author Guilherme Chaguri
@@ -42,14 +37,18 @@ public class TickrateContainer {
     public static final Logger logger = LogManager.getLogger("TickrateChanger");
     public static boolean KEYS_AVAILABLE = false;
 
+
+    private final CommonProxy proxy = DistExecutor.runForDist(() -> ClientProxy::new, () -> CommonProxy::new);
+
     public static KeyBinding SWITCH_SPEED_KEYBIND = null;
-    private long lastKeyInputTime = 0;
+
 
     public TickrateContainer() {
         logger.info("Initializing TickrateContainer!");
+
+        //Config
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, TickrateConfig.ConfigSpec);
         TickrateConfig.loadConfig(TickrateConfig.ConfigSpec, FMLPaths.CONFIGDIR.get().resolve("tickratechanger-common.toml"));
-        TickrateChanger.DEFAULT_TICKRATE=TickrateConfig.GENERAL.defaultTickrate.get().floatValue();
 
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         final IEventBus eventBus = MinecraftForge.EVENT_BUS;
@@ -58,42 +57,21 @@ public class TickrateContainer {
         modEventBus.addListener(this::postInit);
         modEventBus.addListener(this::onClientModStart);
         modEventBus.addListener(this::onServerModStart);
+        modEventBus.addListener(this::configGet);
 
         eventBus.addListener(this::onServerStart);
         eventBus.addListener(this::onChat);
-        eventBus.addListener(this::onKey);
         eventBus.addListener(this::onConnect);
 
         new TickrateChanger();
     }
 
     public void preInit(FMLCommonSetupEvent event) {
-        TickrateChanger.NETWORK = NetworkRegistry.newSimpleChannel(
-                new ResourceLocation(TickrateChanger.MODID, "tickratechanger"),
-                () -> TickrateChanger.NETWORK_VERSION,
-                TickrateChanger.NETWORK_VERSION::equals,
-                TickrateChanger.NETWORK_VERSION::equals
-        );
-
-        TickrateMessageHandler handler = new TickrateMessageHandler();
-
-        TickrateChanger.NETWORK.registerMessage(
-                0,
-                TickrateMessage.class,
-                TickrateMessage::encode,
-                TickrateMessage::decode,
-                handler::handle
-        );
-
-//        TODO
-        SWITCH_SPEED_KEYBIND = new KeyBinding(TickrateChanger.MODID + ".key.switchspeed", GLFW.GLFW_KEY_Z, "key.categories." + TickrateChanger.MODID);
-
-//        TODO
-//        cfg.save();
+        proxy.preInit();
     }
 
     public void postInit(InterModProcessEvent event) {
-        TickrateAPI.changeTickrate(TickrateChanger.DEFAULT_TICKRATE);
+        proxy.postInit();
     }
 
 //    TODO
@@ -112,14 +90,23 @@ public class TickrateContainer {
     }
 
     public void onClientModStart(FMLClientSetupEvent event) {
-        KEYS_AVAILABLE = true;
-        ClientRegistry.registerKeyBinding(SWITCH_SPEED_KEYBIND);
+        if(KEYS_AVAILABLE) {
+            ClientRegistry.registerKeyBinding(ClientProxy.KEY_5);
+            ClientRegistry.registerKeyBinding(ClientProxy.KEY_10);
+            ClientRegistry.registerKeyBinding(ClientProxy.KEY_15);
+            ClientRegistry.registerKeyBinding(ClientProxy.KEY_20);
+            ClientRegistry.registerKeyBinding(ClientProxy.KEY_40);
+            ClientRegistry.registerKeyBinding(ClientProxy.KEY_60);
+            ClientRegistry.registerKeyBinding(ClientProxy.KEY_100);
+        }
     }
 
     public void onServerModStart(FMLDedicatedServerSetupEvent event) {
-        KEYS_AVAILABLE = false;
     }
 
+    public  void configGet(ModConfig.ModConfigEvent ev){
+        TickrateConfig.setModConfig(ev.getConfig());
+    }
 //    TODO
 //    public void onDisconnect(ClientDisconnectionFromServerEvent event) {
 //        TickrateAPI.changeServerTickrate(TickrateChanger.DEFAULT_TICKRATE);
@@ -193,35 +180,4 @@ public class TickrateContainer {
             TickrateAPI.changeClientTickrate(event.getPlayer(), tickrate);
         }
     }
-
-    public void onKey(InputEvent.KeyInputEvent event) {
-        if (!KEYS_AVAILABLE) return;
-
-        float tickrate;
-
-        if (InputMappings.isKeyDown(GLFW.GLFW_KEY_1)) {
-            tickrate = 5;
-        } else if (InputMappings.isKeyDown(GLFW.GLFW_KEY_2)) {
-            tickrate = 10;
-        } else if (InputMappings.isKeyDown(GLFW.GLFW_KEY_3)) {
-            tickrate = 15;
-        } else if (InputMappings.isKeyDown(GLFW.GLFW_KEY_4)) {
-            tickrate = 20;
-        } else if (InputMappings.isKeyDown(GLFW.GLFW_KEY_5)) {
-            tickrate = 30;
-        } else if (InputMappings.isKeyDown(GLFW.GLFW_KEY_6)) {
-            tickrate = 60;
-        } else if (InputMappings.isKeyDown(GLFW.GLFW_KEY_7)) {
-            tickrate = 100;
-        } else {
-            return;
-        }
-
-        // Cooldown. 0.1 real life second to prevent spam
-        if (lastKeyInputTime > System.currentTimeMillis() - 150) return;
-        lastKeyInputTime = System.currentTimeMillis();
-
-        TickrateChanger.NETWORK.sendToServer(new TickrateMessage(tickrate));
-    }
-
 }

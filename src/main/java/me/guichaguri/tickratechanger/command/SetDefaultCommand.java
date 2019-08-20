@@ -16,18 +16,32 @@ public class SetDefaultCommand {
         return Commands.literal("setdefault")
                 .then(Commands
                         .argument("tickrate", FloatArgumentType.floatArg())
-                        .executes(ctx -> setDefaultTickrate(ctx.getSource(), FloatArgumentType.getFloat(ctx, "tickrate")))
+                        .executes(ctx -> setDefaultTickrateUpdate(ctx.getSource(), FloatArgumentType.getFloat(ctx, "tickrate")))
+                        .then(Commands
+                                .literal("--dont-save")
+                                .executes(ctx -> setDefaultTickrateDontUpdate(ctx.getSource(), FloatArgumentType.getFloat(ctx.getLastChild(), "tickrate"))))
+
                 );
     }
 
-    public static int setDefaultTickrate(CommandSource sender, Float tickrate) {
+    public static int setDefaultTickrateUpdate(CommandSource sender, Float tickrate) {
         TickrateAPI.changeDefaultTickrate(tickrate, true);
         TickrateAPI.changeTickrate(tickrate);
 
-        if(TickrateChanger.SHOW_MESSAGES) {
+        if (TickrateChanger.SHOW_MESSAGES) {
             chat(sender, t("tickratechanger.cmd.default.success", GREEN, tickrate));
         }
 
+        return 0;
+    }
+
+    public static int setDefaultTickrateDontUpdate(CommandSource sender, Float tickrate) {
+        TickrateAPI.changeDefaultTickrate(tickrate, false);
+        TickrateAPI.changeTickrate(tickrate);
+
+        if (TickrateChanger.SHOW_MESSAGES) {
+            chat(sender, t("tickratechanger.cmd.default.success", GREEN, tickrate));
+        }
         return 0;
     }
 }

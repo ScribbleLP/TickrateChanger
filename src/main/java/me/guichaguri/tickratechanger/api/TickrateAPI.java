@@ -12,6 +12,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.dimension.DimensionType;
 import net.minecraftforge.fml.LogicalSide;
 import net.minecraftforge.fml.common.thread.EffectiveSide;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.network.PacketDistributor;
 import net.minecraftforge.fml.server.ServerLifecycleHooks;
 
@@ -141,10 +142,7 @@ public class TickrateAPI {
         TickrateChanger.DEFAULT_TICKRATE = ticksPerSecond;
 
         if (save) {
-//            TODO
-//            Configuration cfg = new Configuration(TickrateChanger.CONFIG_FILE);
-//            cfg.get("default", "tickrate", 20.0, "Default tickrate. The game will always initialize with this value.").set(ticksPerSecond);
-//            cfg.save();
+            TickrateConfig.setValueAndSave(TickrateConfig.ClientConfig, "DefaultTickrate", ticksPerSecond);
         }
     }
 
